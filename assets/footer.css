@@ -1,0 +1,52 @@
+footer{
+    background-color: #1b1f25;
+    height: 500px;
+    color: aliceblue;
+    padding: 60px 100px;
+    gap: 20px;
+}
+
+.inforMe p{
+    margin-top: 40px;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+}
+
+table{
+    padding: 10px 35px;
+}
+
+.table td{
+    padding: 10px;
+}
+
+input[type="text"]{
+    border-radius: 8px;
+    width: 400px;
+    height: 40px;
+}
+
+table label{
+    font-size: 20px;
+}
+
+.btnLH{
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2e81ff;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+.btnLH:hover{
+    background-color: #2567cc;
+}
+
+.contact-me{
+    width: 900px;
+    background-color: #2d343f;
+    border-radius: 20px;
+}
