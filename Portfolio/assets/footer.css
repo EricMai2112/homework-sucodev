@@ -25,10 +25,17 @@ input[type="text"]{
     border-radius: 8px;
     width: 400px;
     height: 40px;
+    padding: 10px;
 }
 
 table label{
     font-size: 20px;
+}
+
+textarea{
+    width: 400px;
+    height: 100px;
+    padding: 10px;
 }
 
 .btnLH{

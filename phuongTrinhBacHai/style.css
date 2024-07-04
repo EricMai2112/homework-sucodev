@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    width: 400px;
+    background-color: aquamarine;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    border: 5px solid #008080;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+table tr th{
+    padding: 10px;
+    text-align: center;
+}
+
+table tr td{
+    padding: 5px;
+}
+
+input[type="text"]{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#btnTinh{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #2e81ff;
+    color: aliceblue;
+}
+
+#btnTinh:hover{
+    background-color: #2567cc;
+}
