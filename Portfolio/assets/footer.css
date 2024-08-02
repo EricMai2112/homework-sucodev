@@ -53,7 +53,54 @@ textarea{
 }
 
 .contact-me{
-    width: 900px;
     background-color: #2d343f;
     border-radius: 20px;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+    textarea{
+        height: 30px;
+        padding: 10px;
+    }
+    .table td{
+        padding: 3px;
+    }
+    table label{
+        font-size: 15px;
+    }
+    .btnLH{
+        padding: 7px;
+    }
+    input[type="text"]{
+        padding: 5px;
+        width: 400px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .inforMe p{
+        font-size: 10px;
+        width: 300px;
+    }
+    textarea{
+        height: 30px;
+        width: 200px;
+        padding: 10px;
+    }
+    .table td{
+        padding: 3px;
+    }
+    table label{
+        font-size: 15px;
+    }
+    .btnLH{
+        padding: 7px;
+    }
+    input[type="text"]{
+        padding: 5px;
+        width: 200px;
+        height: 20px;
+    }
 }

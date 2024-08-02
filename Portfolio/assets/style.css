@@ -6,6 +6,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    height: 100vh;
+}
+
 .first{
     padding-top: 56px;
     background-color: #1b1f25;
@@ -201,3 +205,44 @@
     letter-spacing: 1.3px;
 }
 /* Footer */
+
+/*Responsive*/
+/*Tablet*/
+@media (max-width: 768px) {
+    .infor-container, .fourth-container, footer{
+        flex-direction: column;
+    }
+    .project-item{
+        width: 150px;
+     }
+}
+
+@media (max-width: 375px) {
+    .second{
+        padding: 10px;
+    }
+    .projects{
+        flex-direction: column;
+    }
+    .infor-main p{
+        font-size: 10px;
+        width: 300px;
+    }
+    .infor-avatar img{
+        width: 150px;
+        height: 150px;
+    }
+
+    /*fourthSection*/
+    .pet-avatar img{
+        width: 150px;
+        height: 150px;
+    }
+    .pet-description p{
+        font-size: 10px;
+        width: 300px;
+    }
+    .fourth{
+        padding: 10px;
+    }
+}
