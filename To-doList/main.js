@@ -7,21 +7,36 @@ btn.onclick = function() {
     if(main){
         const work = document.createElement('div');
         work.classList.add('work');
+        
+/*-------------------When using onclick to solve, one section such as work only respond one click, so using addEvenListener to do it---------------------------*/ 
+ 
+        // work.onclick = function(e) {
+        //     if(e.target.closest('.delete-work')){
+        //         main.removeChild(work);
+        //     }
+        // }
 
-        work.onclick = function(e) {
+        // work.onclick = function(e) {
+        //     if(e.target.closest('.check-work')){
+        //         work.style.backgroundColor = '#35de38';
+        //         work.innerHTML = `
+        //             <div class="title">${content}</div>
+        //         `;
+        //     }
+        // }
+        work.addEventListener('click', function(e){
             if(e.target.closest('.delete-work')){
                 main.removeChild(work);
             }
-        }
+        })
 
-        work.onclick = function(e) {
+        work.addEventListener('click', function(e) {
             if(e.target.closest('.check-work')){
                 work.style.backgroundColor = '#35de38';
-                work.innerHTML = `
-                    <div class="title">${content}</div>
-                `;
+                work.style.animation = `fadeOut 1s forwards`;
+                main.removeChild(work);
             }
-        }
+        })
 
         work.innerHTML = `
             <div class="title">${content}</div>
