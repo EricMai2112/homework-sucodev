@@ -1,14 +1,14 @@
 const btn = document.querySelector('#btnAdd');
+const main = document.getElementById('works');
 
 btn.onclick = function() {
     const content = document.getElementById('txtAdd').value;
 
-    const main = document.getElementById('works');
     if(main){
         const work = document.createElement('div');
         work.classList.add('work');
         
-/*-------------------When using onclick to solve, one section such as work only respond one click, so using addEvenListener to do it---------------------------*/ 
+/*-------------------When using onclick method to solve, one section such as work only respond one click, so using addEvenListener method to do it---------------------------*/ 
  
         // work.onclick = function(e) {
         //     if(e.target.closest('.delete-work')){
@@ -24,9 +24,11 @@ btn.onclick = function() {
         //         `;
         //     }
         // }
+
         work.addEventListener('click', function(e){
             if(e.target.closest('.delete-work')){
                 main.removeChild(work);
+                countWorks();
             }
         })
 
@@ -34,8 +36,10 @@ btn.onclick = function() {
             if(e.target.closest('.check-work')){
                 work.style.backgroundColor = '#35de38';
                 work.style.animation = `fadeOut 1s forwards`;
+                /*Because the animation takes 1 second to fade out, using setTimeout with a 1-second delay to postpone removeChild*/
                 setTimeout(function(){
                     main.removeChild(work);
+                    countWorks();
                 }, 1000)
             }
         })
@@ -47,5 +51,19 @@ btn.onclick = function() {
         `;
 
         main.appendChild(work);
+        countWorks();
     }
+}
+
+/*Counting the amount of works currently are active*/
+function countWorks(){
+    const works = document.querySelector('.NumberOfWorks');
+        const NoWorks = main.childElementCount;
+        if(NoWorks>0){
+            works.innerHTML = `
+            <h3>(${NoWorks} works)</h3>
+        `;
+        }else{
+            works.innerHTML =``;
+        }
 }
