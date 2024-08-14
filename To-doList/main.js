@@ -36,7 +36,7 @@ btn.onclick = function() {
             if(e.target.closest('.check-work')){
                 work.style.backgroundColor = '#35de38';
                 work.style.animation = `fadeOut 1s forwards`;
-                /*Because the animation takes 1 second to fade out, using setTimeout with a 1-second delay to postpone removeChild*/
+                /*Because the animation takes 1 second to fade out, using setTimeout with a 1-second delay to postpone removeChild method*/
                 setTimeout(function(){
                     main.removeChild(work);
                     countWorks();
@@ -55,7 +55,7 @@ btn.onclick = function() {
     }
 }
 
-/*Counting the amount of works currently are active*/
+/*Counting the amount of current works are active*/
 function countWorks(){
     const works = document.querySelector('.NumberOfWorks');
         const NoWorks = main.childElementCount;
