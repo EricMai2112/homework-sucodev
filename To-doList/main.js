@@ -34,7 +34,9 @@ btn.onclick = function() {
             if(e.target.closest('.check-work')){
                 work.style.backgroundColor = '#35de38';
                 work.style.animation = `fadeOut 1s forwards`;
-                main.removeChild(work);
+                setTimeout(function(){
+                    main.removeChild(work);
+                }, 1000)
             }
         })
 
